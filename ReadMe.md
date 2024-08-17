@@ -69,6 +69,73 @@
 - 드론 사용 시 관련 법규를 준수해야 합니다.
 - 개인정보 보호에 유의하여 사용해야 합니다.
 
+<br/>
+<br/>
+
+# Drone Face Recognition and License Plate OCR Project
+
+This project uses a DJI Tello drone to recognize specific individuals' faces and read vehicle license plates using OCR.
+
+## Key Features
+1. Face Recognition: Uses a model trained with Teachable Machine to recognize specific faces and mark them with bounding boxes.
+2. Drone Control: Allows drone control through keyboard inputs.
+3. License Plate OCR: Recognizes vehicle license plates in captured images and extracts the text.
+4. Image Saving: Saves captured images and extracted license plate text.
+
+## Technologies Used
+- Python
+- OpenCV
+- Keras
+- DJITelloPy
+- PyTesseract
+- NumPy
+
+## System Requirements
+- Operating System: Linux (Ubuntu 18.04 LTS or higher recommended)
+- Python 3.6 or higher
+- DJI Tello drone
+- Webcam (can be used instead of drone camera)
+
+## Installation
+1. Install required libraries:
+   ```
+   pip install djitellopy opencv-python keras numpy pytesseract
+   ```
+2. Place the model file (`keras_model.h5`) and label file (`labels.txt`) trained in Teachable Machine in the project directory.
+3. Download the Haar Cascade file (`haarcascade_frontalface_default.xml`) for face recognition and place it in the project directory.
+
+## Usage
+1. Turn on the DJI Tello drone and connect via Wi-Fi.
+2. Run the program with the following command:
+   ```
+   python run.py
+   ```
+3. Keyboard controls:
+   - W/S/A/D: Forward/Backward/Left/Right
+   - I/K/J/L: Up/Down/Rotate Left/Rotate Right
+   - UP: Takeoff
+   - DOWN: Land
+   - C: Take photo
+   - ESC: Exit program
+4. Captured images and OCR results are saved in the `LP_OCR` folder.
+
+## Project Structure
+- `run.py`: Main execution file
+- `Drone.py`: Drone control and face recognition logic
+- `OCR.py`: License plate OCR processing
+- `KBcon.py`: Keyboard input handling
+- `face.py`: Face recognition test file
+
+## Precautions
+- This project should be used for educational and research purposes only.
+- Comply with relevant regulations when using drones.
+- Use with caution regarding personal privacy protection.
+
+## License
+This project is licensed under the [MIT License](https://opensource.org/licenses/MIT).
+
+
+
 ## 라이선스
 
 이 프로젝트는 [MIT 라이선스](https://opensource.org/licenses/MIT)에 따라 라이선스가 부여됩니다.
