@@ -18,6 +18,13 @@
 - PyTesseract
 - NumPy
 
+## 시스템 요구사항
+
+- 운영체제: Linux (Ubuntu 18.04 LTS 이상 권장)
+- Python 3.6 이상
+- DJI Tello 드론
+- 웹캠 (드론 카메라 대신 사용 가능)
+
 ## 설치 방법
 
 1. 필요한 라이브러리 설치:
